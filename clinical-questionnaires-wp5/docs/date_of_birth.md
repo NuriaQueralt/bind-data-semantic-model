@@ -2,6 +2,13 @@
 
 ### Semantic model figure
 This module describes the data elements in the KHTQ. It specifically covers the data element in the table _Date of Birth_. This module is based on the EJP RD CDE semantic model module for _Personal Information_ group [CDE-semantic-model/personal_information](https://github.com/ejp-rd-vp/CDE-semantic-model/blob/980b1125222f1654c03da605835cbfd987d7970e/docs/personal_information.md).
+<p align="center">
+    <a href="../images/rdf/date_of_birth.png" target="_blank">
+        <img src="../images/rdf/date_of_birth.png">
+    </a>
+</p>
+
+***
 
 ### Example RDF (turtle)
 ```ttl
@@ -9,6 +16,7 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 :identifier_ a sio:SIO_000115 ;
@@ -48,6 +56,7 @@ PREFIX : <http://w3id.org/bind/data/v1/shex/>
 PREFIX obo: <http://purl.obolibrary.org/obo/> 
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :identifierShape IRI {
