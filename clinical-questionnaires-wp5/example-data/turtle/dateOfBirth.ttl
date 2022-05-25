@@ -9,7 +9,7 @@
     sio:SIO_000020 :birthdate_role_ ;
     sio:SIO_000300 "uid_000001"^^xsd:string .
 
-:person_ a sio:SIO_000498;
+:person_ a sio:SIO_000498 ;
     sio:SIO_000228 :birthdate_role_ ;
     sio:SIO_000008 :birthdate_attribute_ .
 
@@ -26,5 +26,5 @@
     sio:SIO_000300 "2013-12-11"^^xsd:date ;
     sio:SIO_000628 :birthdate_attribute_ .
 
-:birthdate_attribute_ a sio:SIO_000614, obo:NCIT_C68615 ;
+:birthdate_attribute_ a obo:NCIT_C68615, sio:SIO_000614 ;
     rdfs:label "Attribute Type: Birth date"^^xsd:string .

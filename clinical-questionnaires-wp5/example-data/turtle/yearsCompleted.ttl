@@ -1,0 +1,55 @@
+@prefix : <http://w3id.org/bind/data/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :patient_role_ ;
+    sio:SIO_000300 "uid_000001"^^xsd:string .
+
+:person_ a sio:SIO_000498 ;
+    sio:SIO_000228 :patient_role_, :primary_school_role_, :secondary_school_role_ ;
+    sio:SIO_000008 :education_attribute_ .
+
+:patient_role_ a obo:OBI_0000093, sio:SIO_000016 ;
+    rdfs:label "Role: Behavioral test patient"^^xsd:string ;
+    sio:SIO_000356 :primary_school_process_, :secondary_school_process_ .
+
+:primary_school_role_ a obo:OMRSE_00000060, sio:SIO_000016 ;
+    rdfs:label "Role: Primary school role"^^xsd:string ;
+    sio:SIO_000356 :primary_school_process_ .
+
+:secondary_school_role_ a obo:OMRSE_00000065, sio:SIO_000016 ;
+    rdfs:label "Role: Secondary school role"^^xsd:string ;
+    sio:SIO_000356 :secondary_school_process_ .
+
+:primary_school_process_ a sio:SIO_001054, sio:SIO_000006 ;
+    rdfs:label "Process: Years completed in 1ary school assessment"^^xsd:string ;
+    sio:SIO_000229 :primary_school_output_ .
+
+:secondary_school_process_ a sio:SIO_001054, sio:SIO_000006 ;
+    rdfs:label "Process: Years completed in 2ary school assessment"^^xsd:string ;
+    sio:SIO_000229 :secondary_school_output_ .
+
+# In the case the patient is the respondent (self-report), then both agent and target are the patient
+:testing_process_ a obo:NCIT_C20993, sio:SIO_000006 ;
+    rdfs:label "Process: Performing a behavioral test"^^xsd:string ;
+    sio:SIO_000139 :patient_role_ ;
+    sio:SIO_000291 :patient_role_ .
+
+:primary_school_output_ a sio:SIO_000070, sio:SIO_000015 ;
+    rdfs:label "Output Type: Years completed in primary school"^^xsd:string ;
+    sio:SIO_000300 "6"^^xsd:string ;
+    sio:SIO_000221 obo:UO_0000036 ;
+    sio:SIO_000628 :education_attribute_ .
+
+:secondary_school_output_ a sio:SIO_000070, sio:SIO_000015 ;
+    rdfs:label "Output Type: Years completed in secondary school"^^xsd:string ;
+    sio:SIO_000300 "n/a"^^xsd:string ;
+    sio:SIO_000221 obo:UO_0000036 ;
+    sio:SIO_000628 :education_attribute_ .
+
+:education_attribute_ a obo:NCIT_C17953, sio:SIO_000614 ;
+    rdfs:label "Attribute Type: Education level"^^xsd:string .
