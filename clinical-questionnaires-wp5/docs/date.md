@@ -16,20 +16,17 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-:testing_process_ a sio:SIO_000006 ;
-    rdfs:label "Process: Performing a behavioral test process"^^xsd:string ;
+:testing_process_ a obo:NCIT_C91105, sio:SIO_000006 ;
+    rdfs:label "Process: Performing a behavioral test"^^xsd:string ;
     sio:SIO_000230 :test_input_ ;
     sio:SIO_000008 :date_attribute_ .
-
 
 :test_input_ a sio:SIO_000148 ;
     rdfs:label "Input Type: KHTQ Questionnaire Document"^^xsd:string .   
 
-
-:date_attribute_ a sio:SIO_000614, obo:NCIT_C25164 ;
+:date_attribute_ a obo:NCIT_C25164, sio:SIO_000614 ;
     rdfs:label "Attribute Type: Date" ;
     sio:SIO_000300 "2022-02-21"^^xsd:date .
 ```
@@ -46,11 +43,11 @@ PREFIX : <http://w3id.org/bind/data/v1/shex/>
 PREFIX obo: <http://purl.obolibrary.org/obo/> 
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :testingProcessShape IRI { 
     a [sio:SIO_000006] ;
+    a [obo:NCIT_C91105] ;
     rdfs:label xsd:string? ;
     sio:SIO_000230 @:testInputShape ;
     sio:SIO_000008 @:dateAttributeShape
@@ -62,7 +59,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 }
 
 :dateAttributeShape IRI {
-    a [sio:SIO_000016] ;
+    a [sio:SIO_000614] ;
     a [obo:NCIT_C25164] ;
     rdfs:label xsd:string? ;
     sio:SIO_000300 xsd:date
