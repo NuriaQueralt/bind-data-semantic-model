@@ -3,7 +3,7 @@
 ### Semantic model figure
 This module describes the data elements in the KHTQ. It specifically covers the data elements in the table _Highest education level parent/guardian_ and _Highest education level of other parent/guardian_. This module is based on the EJP RD CDE semantic model module for _Personal Information_ group [CDE-semantic-model/personal information](https://github.com/ejp-rd-vp/CDE-semantic-model/blob/980b1125222f1654c03da605835cbfd987d7970e/docs/personal_information.md).
 <p align="center">
-    <a href="../images/rdf/2_Personal_information.png" target="_blank">
+    <a href="../images/rdf/highest_education_guardian.png" target="_blank">
         <img src="../images/rdf/highest_education_guardian.png">
     </a>
 </p>
