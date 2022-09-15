@@ -70,7 +70,7 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 :guardian_respondent_attribute_ a obo:NCIT_C53615, sio:SIO_000614 ;
     rdfs:label "Attribute Type: Type of reporter"^^xsd:string .
 
-:input_test_ a obo:NCIT_C17048, sio:SIO_000148 ;
+:test_input_ a obo:NCIT_C17048, sio:SIO_000148 ;
     rdfs:label "Input Type: KHTQ Questionnaire Document"^^xsd:string .
 ```
 
