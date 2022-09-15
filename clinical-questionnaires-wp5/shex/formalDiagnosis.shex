@@ -7,48 +7,58 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :identifierShape IRI {
     a [sio:SIO_000115] ;
     rdfs:label xsd:string? ;
-    sio:SIO_000020 @:medicalDiagnosisRoleShape ;
+    sio:SIO_000020 @:patientRoleShape ;
     sio:SIO_000300 xsd:string
 }
 
 :personShape IRI { 
     a [sio:SIO_000498] ;
     rdfs:label xsd:string? ;
-    sio:SIO_000228 @:medicalDiagnosisRoleShape ;
-    sio:SIO_000008 @:medicalDiagnosisAttributeShape
+    sio:SIO_000228 @:patientRoleShape ;
+    sio:SIO_000008 @:formalDiagnosisAttributeShape
 }
 
-:medicalDiagnosisRoleShape IRI {
-    a [obo:OBI_0000093] ;
+:patientRoleShape IRI {
     a [sio:SIO_000016] ;
+    a [obo:OBI_0000093] ;
     rdfs:label xsd:string? ;
-    sio:SIO_000356 @:medicalDiagnosisProcessShape
+    sio:SIO_000356 @:formalDiagnosisProcessShape
 }
 
-:medicalDiagnosisProcessShape IRI {
+:formalDiagnosisProcessShape IRI {
     a [sio:SIO_000006] ;
-    a [sio:SIO_001001] ;
+    a [sio:SIO_001022] ;
     rdfs:label xsd:string? ;
     sio:SIO_000230 @:testInputShape ;
-    sio:SIO_000229 @:medicalDiagnosisOutputShape
+    sio:SIO_000229 @:formalDiagnosisOutputShape
 }
 
-:medicalDiagnosisOutputShape IRI {
+:formalDiagnosisOutputShape IRI {
     a [sio:SIO_000015] ;
     a [sio:SIO_001003] ;
+    a [sio:SIO_000785] ;
     rdfs:label xsd:string? ;
     sio:SIO_000300 xsd:string ;
-    sio:SIO_000628 @:medicalDiagnosisAttributeShape
+    sio:SIO_000628 @:formalDiagnosisAttributeShape
 }
 
-:medicalDiagnosisAttributeShape IRI {
+:formalDiagnosisAttributeShape IRI {
     a [sio:SIO_000614] ;
-    a IRI /^http:\/\/www.orpha.net\/ORDO\/Orphanet_/ ;
+    a [sio:SIO_010299] ;
     rdfs:label xsd:string?
 }
 
 :testInputShape IRI {
     a [sio:SIO_000148];
     a [obo:NCIT_C17048] ;
-    rdfs:label xsd:string?
+    rdfs:label xsd:string? ;
+    sio:SIO_000028 @:testInputQuestionShape
 }
+
+:testInputQuestionShape IRI {
+    a [sio:SIO_000015] ;
+    a [sio:SIO_000085] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string ;
+    sio:SIO_000332 IRI /^http:\/\/purl.obolibrary.org\/obo\/MONDO_/
+}  
