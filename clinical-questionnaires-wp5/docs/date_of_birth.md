@@ -34,6 +34,7 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 
 :birthdate_process_ a sio:SIO_000006 ;
     rdfs:label "Process: Age measuring"^^xsd:string ;
+    sio:SIO_000230 :test_input_ ;
     sio:SIO_000229 :birthdate_output_ .
 
 :birthdate_output_ a sio:SIO_000015 ;
@@ -43,6 +44,9 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 
 :birthdate_attribute_ a obo:NCIT_C68615, sio:SIO_000614 ;
     rdfs:label "Attribute Type: Birth date"^^xsd:string .
+
+:test_input_ a obo:NCIT_C17048, sio:SIO_000148 ;
+    rdfs:label "Input Type: KHTQ Questionnaire Document"^^xsd:string .
 ```
 
 ***
@@ -83,6 +87,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :birthdateProcessShape IRI {
     a [sio:SIO_000006] ;
     rdfs:label xsd:string? ;
+    sio:SIO_000230 @:testInputShape ;
     sio:SIO_000229 @:birthdateOutputShape
 }
 
@@ -96,6 +101,12 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :birthdateAttributeShape IRI {
     a [sio:SIO_000614] ;
     a [obo:NCIT_C68615] ;
+    rdfs:label xsd:string?
+}
+
+:testInputShape IRI {
+    a [sio:SIO_000148];
+    a [obo:NCIT_C17048] ;
     rdfs:label xsd:string?
 }
 ```

@@ -28,6 +28,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :birthdateProcessShape IRI {
     a [sio:SIO_000006] ;
     rdfs:label xsd:string? ;
+    sio:SIO_000230 @:testInputShape ;
     sio:SIO_000229 @:birthdateOutputShape
 }
 
@@ -41,5 +42,11 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :birthdateAttributeShape IRI {
     a [sio:SIO_000614] ;
     a [obo:NCIT_C68615] ;
+    rdfs:label xsd:string?
+}
+
+:testInputShape IRI {
+    a [sio:SIO_000148];
+    a [obo:NCIT_C17048] ;
     rdfs:label xsd:string?
 }
