@@ -1,3 +1,17 @@
+## Years completed
+
+### Semantic model figure
+This module describes the data elements in the KHTQ. It specifically covers the data elements in the table _Years completed in primary school_ and _Years completed in seconday school_. This module is based on the EJP RD CDE semantic model module for _Personal Information_ group [CDE-semantic-model/personal information](https://github.com/ejp-rd-vp/CDE-semantic-model/blob/980b1125222f1654c03da605835cbfd987d7970e/docs/personal_information.md).
+<p align="center">
+    <a href="../images/rdf/respondent.png" target="_blank">
+        <img src="../images/rdf/years_completed.png">
+    </a>
+</p>
+
+***
+
+### Example RDF (turtle)
+```ttl
 @prefix : <http://w3id.org/bind/data/v1/example-rdf/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix sio: <http://semanticscience.org/resource/> .
@@ -63,3 +77,15 @@
 
 :test_input_ a obo:NCIT_C17048, sio:SIO_000148 ;
     rdfs:label "Input Type: KHTQ Questionnaire Document"^^xsd:string .
+```
+
+***
+### Validation artifacts
+##### ShEx figure
+
+
+***
+##### ShEx
+``` ShEx
+
+```
