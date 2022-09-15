@@ -14,6 +14,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :testInputShape IRI {
     a [sio:SIO_000148] ;
+    a [obo:NCIT_C17048] ;
     rdfs:label xsd:string? 
 }
 

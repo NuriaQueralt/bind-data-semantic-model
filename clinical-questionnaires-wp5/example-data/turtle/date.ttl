@@ -9,7 +9,7 @@
     sio:SIO_000230 :test_input_ ;
     sio:SIO_000008 :date_attribute_ .
 
-:test_input_ a sio:SIO_000148 ;
+:test_input_ a obo:NCIT_C17048, sio:SIO_000148 ;
     rdfs:label "Input Type: KHTQ Questionnaire Document"^^xsd:string .  
 
 :date_attribute_ a obo:NCIT_C25164, sio:SIO_000614 ;

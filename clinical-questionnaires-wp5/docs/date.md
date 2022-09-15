@@ -23,7 +23,7 @@ This module describes the data elements in the KHTQ. It specifically covers the 
     sio:SIO_000230 :test_input_ ;
     sio:SIO_000008 :date_attribute_ .
 
-:test_input_ a sio:SIO_000148 ;
+:test_input_ a obo:NCIT_C17048, sio:SIO_000148 ;
     rdfs:label "Input Type: KHTQ Questionnaire Document"^^xsd:string .   
 
 :date_attribute_ a obo:NCIT_C25164, sio:SIO_000614 ;
@@ -55,6 +55,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :testInputShape IRI {
     a [sio:SIO_000148] ;
+    a [obo:NCIT_C17048] ;
     rdfs:label xsd:string? 
 }
 
