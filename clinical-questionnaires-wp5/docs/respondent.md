@@ -56,5 +56,57 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 ***
 ##### ShEx
 ``` ShEx
+PREFIX : <http://w3id.org/bind/data/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+:identifierShape IRI {
+    a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000020 @:respondentRoleShape ;
+    sio:SIO_000300 xsd:string
+}
+
+:personShape IRI { 
+    a [sio:SIO_000498] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000228 @:patientRoleShape ;
+    sio:SIO_000008 @:respondentAttributeShape
+}
+
+:respondentRoleShape IRI {
+    a [sio:SIO_000016] ;
+    a [obo:OBI_0000211] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000356 @:respondentProcessShape
+}
+
+:patientRoleShape IRI {
+    a [sio:SIO_000016] ;
+    a [obo:OBI_0000093] ;
+    rdfs:label xsd:string? 
+}
+
+:respondentProcessShape IRI {
+    a [sio:SIO_000006] ;
+    a [obo:NCIT_C173765] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000229 @:respondentOutputShape
+}
+
+:respondentOutputShape IRI {
+    a [sio:SIO_000015] ;
+    a [sio:SIO_000785] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string ;
+    sio:SIO_000628 @:respondentAttributeShape
+}
+
+:respondentAttributeShape IRI {
+    a [sio:SIO_000614] ;
+    a [obo:NCIT_C53615] ;
+    rdfs:label xsd:string?
+}
 ```
