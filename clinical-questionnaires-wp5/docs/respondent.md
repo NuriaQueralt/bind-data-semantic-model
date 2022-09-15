@@ -37,6 +37,7 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 
 :respondent_process_ a obo:NCIT_C173765, sio:SIO_000006 ;
     rdfs:label "Process: Case-based reporting"^^xsd:string ;
+    sio:SIO_000230 :test_input_ ;
     sio:SIO_000229 :respondent_output_ .
 
 :respondent_output_ a sio:SIO_000785, sio:SIO_000015 ;
@@ -46,6 +47,9 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 
 :respondent_attribute_ a obo:NCIT_C53615, sio:SIO_000614 ;
     rdfs:label "Attribute Type: Type of reporter"^^xsd:string .
+
+:test_input_ a obo:NCIT_C17048, sio:SIO_000148 ;
+    rdfs:label "Input Type: KHTQ Questionnaire Document"^^xsd:string .
 ```
 
 ***
@@ -93,6 +97,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [sio:SIO_000006] ;
     a [obo:NCIT_C173765] ;
     rdfs:label xsd:string? ;
+    sio:SIO_000230 @:testInputShape ;
     sio:SIO_000229 @:respondentOutputShape
 }
 
@@ -107,6 +112,12 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :respondentAttributeShape IRI {
     a [sio:SIO_000614] ;
     a [obo:NCIT_C53615] ;
+    rdfs:label xsd:string?
+}
+
+:testInputShape IRI {
+    a [sio:SIO_000148];
+    a [obo:NCIT_C17048] ;
     rdfs:label xsd:string?
 }
 ```

@@ -35,6 +35,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [sio:SIO_000006] ;
     a [obo:NCIT_C173765] ;
     rdfs:label xsd:string? ;
+    sio:SIO_000230 @:testInputShape ;
     sio:SIO_000229 @:respondentOutputShape
 }
 
@@ -49,5 +50,11 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :respondentAttributeShape IRI {
     a [sio:SIO_000614] ;
     a [obo:NCIT_C53615] ;
+    rdfs:label xsd:string?
+}
+
+:testInputShape IRI {
+    a [sio:SIO_000148];
+    a [obo:NCIT_C17048] ;
     rdfs:label xsd:string?
 }
