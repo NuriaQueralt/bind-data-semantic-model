@@ -5,7 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-:testing_process_ a obo:NCIT_C20993, sio:SIO_000006 ;
+:testing_process_ a obo:NCIT_C91105, sio:SIO_000006 ;
     rdfs:label "Process: Performing a behavioral test"^^xsd:string ;
     sio:SIO_000230 :test_input_ ;
     sio:SIO_000008 :date_attribute_ .
