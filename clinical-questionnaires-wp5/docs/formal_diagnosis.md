@@ -1,3 +1,17 @@
+## Formal Diagnosis
+
+### Semantic model figure
+This module describes the data elements in the KHTQ. It specifically covers the section part in the questionnaire _FORMAL DIAGNOSIS_. This module is based on the EJP RD CDE semantic model module for _Diagnosis_ group [CDE-semantic-model/personal_information](https://github.com/ejp-rd-vp/CDE-semantic-model/blob/980b1125222f1654c03da605835cbfd987d7970e/docs/personal_information.md).
+<p align="center">
+    <a href="../images/rdf/formal_diagnosis.png" target="_blank">
+        <img src="../images/rdf/formal_diagnosis.png">
+    </a>
+</p>
+
+***
+
+### Example RDF (turtle)
+```ttl
 @prefix : <http://w3id.org/bind/data/v1/example-rdf/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix sio: <http://semanticscience.org/resource/> .
@@ -39,3 +53,20 @@
     rdfs:label "Part Type: Question"^^xsd:string ;
     sio:SIO_000300 "Autism Spectrum Disorder (ASD)"^^xsd:string ;
     sio:SIO_000332 obo:MONDO_0005258 .
+```
+
+***
+### Validation artifacts
+##### ShEx figure
+
+<p align="center">
+    <a href="../images/shex/2_Personal_information.svg" target="_blank">
+        <img src="../images/shex/2_Personal_information.svg">
+    </a>
+</p>
+
+***
+##### ShEx
+``` ShEx
+
+```
