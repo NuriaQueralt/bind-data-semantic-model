@@ -2,19 +2,20 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 :identifier_ a sio:SIO_000115 ;
+    rdfs:label "Identifier"^^xsd:string ;
     sio:SIO_000020 :diagnosis_role_ ;
     sio:SIO_000300 "uid_000001"^^xsd:string .
 
 :person_ a sio:SIO_000498 ;
+    rdfs:label "Person"^^xsd:string ;
     sio:SIO_000228 :diagnosis_role_ ;
     sio:SIO_000008 :diagnosis_attribute_ .
 
 :diagnosis_role_ a obo:OBI_0000093, sio:SIO_000016 ;
-    rdfs:label "Role: Diagnosis patient"^^xsd:string ;
+    rdfs:label "Role: Patient"^^xsd:string ;
     sio:SIO_000356 :diagnosis_process_ .
 
 :diagnosis_process_ a sio:SIO_000006, sio:SIO_001001 ;
