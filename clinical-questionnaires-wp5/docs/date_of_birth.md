@@ -52,7 +52,11 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 ***
 ### Validation artifacts
 ##### ShEx figure
-
+<p align="center">
+    <a href="../images/shex/date_of_birth.svg" target="_blank">
+        <img src="../images/shex/date_of_birth.svg">
+    </a>
+</p>
 
 ***
 ##### ShEx
