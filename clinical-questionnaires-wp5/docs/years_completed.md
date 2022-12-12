@@ -82,9 +82,14 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 ***
 ### Validation artifacts
 ##### ShEx figure
-
+<p align="center">
+    <a href="../images/shex/years_completed.svg" target="_blank">
+        <img src="../images/shex/years_completed.svg">
+    </a>
+</p>
 
 ***
+
 ##### ShEx
 ``` ShEx
 PREFIX : <http://w3id.org/bind/data/v1/shex/>
@@ -117,7 +122,9 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :personShape IRI { 
     a [sio:SIO_000498] ;
     rdfs:label xsd:string? ;
-    sio:SIO_000228 @:patientRoleShape, @:primarySchoolRoleShape, @:secondarySchoolRoleShape ;
+    sio:SIO_000228 @:patientRoleShape ;
+    sio:SIO_000228 @:primarySchoolRoleShape ; 
+    sio:SIO_000228 @:secondarySchoolRoleShape ;
     sio:SIO_000008 @:educationAttributeShape
 }
 
@@ -125,7 +132,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [sio:SIO_000016] ;
     a [obo:OBI_0000093] ;
     rdfs:label xsd:string? ;
-    sio:SIO_000356 @:primarySchoolProcessShape, @:secondarySchoolProcessShape
+    sio:SIO_000356 @:primarySchoolProcessShape ;
+    sio:SIO_000356 @:secondarySchoolProcessShape
 }
 
 :primarySchoolRoleShape IRI {
