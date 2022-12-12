@@ -79,8 +79,8 @@ This module describes the data elements in the KHTQ. It specifically covers the 
 ##### ShEx figure
 
 <p align="center">
-    <a href="../images/shex/2_Personal_information.svg" target="_blank">
-        <img src="../images/shex/2_Personal_information.svg">
+    <a href="../images/shex/highest_education_guardian.svg" target="_blank">
+        <img src="../images/shex/highest_education_guardian.svg">
     </a>
 </p>
 
@@ -103,8 +103,10 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :personShape IRI { 
     a [sio:SIO_000498] ;
     rdfs:label xsd:string? ;
-    sio:SIO_000228 @:guardianRoleShape, @:guardianRespondentRoleShape ;
-    sio:SIO_000008 @:guardianEducationAttributeShape, @:guardianRespondentAttributeShape
+    sio:SIO_000228 @:guardianRoleShape ; 
+    sio:SIO_000228 @:guardianRespondentRoleShape ;
+    sio:SIO_000008 @:guardianEducationAttributeShape ;
+    sio:SIO_000008 @:guardianRespondentAttributeShape
 }
 
 :guardianRoleShape IRI {
@@ -156,7 +158,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :guardianRespondentProcessShape IRI {
     a [sio:SIO_000006] ;
-    a [obo:NCIT_C173765] ;
+    a [obo:NCIT_C173765] ; 
     rdfs:label xsd:string? ;
     sio:SIO_000229 @:guardianRespondentOutputShape
 }
@@ -172,7 +174,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :guardianRespondentAttributeShape IRI {
     a [sio:SIO_000614] ;
     a [obo:NCIT_C53615] ;
-    rdfs:label xsd:string?
+    rdfs:label xsd:string? 
 }
 
 :testInputShape IRI {

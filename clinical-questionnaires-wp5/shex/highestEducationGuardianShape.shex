@@ -14,8 +14,10 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :personShape IRI { 
     a [sio:SIO_000498] ;
     rdfs:label xsd:string? ;
-    sio:SIO_000228 @:guardianRoleShape, @:guardianRespondentRoleShape ;
-    sio:SIO_000008 @:guardianEducationAttributeShape, @:guardianRespondentAttributeShape
+    sio:SIO_000228 @:guardianRoleShape ; 
+    sio:SIO_000228 @:guardianRespondentRoleShape ;
+    sio:SIO_000008 @:guardianEducationAttributeShape ;
+    sio:SIO_000008 @:guardianRespondentAttributeShape
 }
 
 :guardianRoleShape IRI {
