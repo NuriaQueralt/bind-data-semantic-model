@@ -21,11 +21,12 @@
 :restoration_measurement_process_ a obo:OBI_0000070, sio:SIO_000006 ;
     rdfs:label "Process: Measuring restored isoform"^^xsd:string ;
     sio:SIO_000291 :treated_target_ ;
-    sio:SIO_000229 :restoration_output_ .
+    sio:SIO_000229 :restoration_output_ ;
+    sio:SIO_000008 :measurement_time_ .
 
 :treated_target_ a obo:UBERON_0002616, sio:SIO_010046 ;
     rdfs:label "Target: Anatomy"^^xsd:string ;
-    obo:BFO_0000050 :entity_ .
+    sio:SIO_000068 :entity_ .
 
 :restoration_output_ a obo:IAO_0000109, sio:SIO_000015 ;
     rdfs:label "Output: Restoration percent"^^xsd:string ;
@@ -33,12 +34,20 @@
     sio:SIO_000221 :output_unit_ ;
     sio:SIO_000628 :treated_attribute_ .
 
+:measurement_time_ a obo:IAO_0000582, sio:SIO_000417 ;
+    rdfs:label "Time"^^xsd:string ;
+    sio:SIO_000300 "11"^^xsd:integer ;
+    sio:SIO_000221 :time_unit_ .
+
 :output_unit_ a obo:UO_0000187, sio:SIO_000074 ;
     rdfs:label "Unit: %"^^xsd:string .
 
 :treated_attribute_ a obo:PR_P11531-1, sio:SIO_000614 ;
     rdfs:label "Attribute: Dystrophin isoform"^^xsd:string ; 
     sio:SIO_010079 <https://identifiers.org/MGI:94909> .
+
+:time_unit_ a obo:UO_0000034, sio:SIO_000074 ;
+    rdfs:label "Unit: Week"^^xsd:string .
 
 <https://identifiers.org/MGI:94909> a <http://www.orpha.net/ORDO/Orphanet_121117>, obo:SO_0000704, sio:SIO_010035 ;
     rdfs:label "Gene: Dmd"^^xsd:string .
