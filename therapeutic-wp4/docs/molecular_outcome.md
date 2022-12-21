@@ -23,7 +23,7 @@ This module describes the __molecular__ data elements for therapeutic outcome. I
     sio:SIO_000300 "AS-07 T2"^^xsd:string ;
     sio:SIO_000020 :treated_role_ .
 
-:entity_ a obo:http:NCBITaxon_10090, sio:SIO_010375 ;
+:entity_ a obo:NCBITaxon_10090, sio:SIO_010375 ;
     rdfs:label "Entity: Mouse"^^xsd:string ;
     sio:SIO_000228 :treated_role_ ;
     sio:SIO_000008 :treated_attribute_ .
@@ -70,5 +70,76 @@ This module describes the __molecular__ data elements for therapeutic outcome. I
 ***
 ##### ShEx
 ``` ShEx
+PREFIX : <http://w3id.org/bind/data/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+:identifierShape IRI {
+    a [obo:IAO_0020000] ;
+    a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string ;
+    sio:SIO_000020 @:treatedRoleShape 
+}
+
+:entityShape IRI {
+    a [obo:NCBITaxon_10090] ;
+    a [sio:SIO_010375] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000228 @:treatedRoleShape ;
+    sio:SIO_000008 @:treatedAttributeShape 
+}
+
+:treatedRoleShape IRI {
+    a [obo:OBI_0000813] ;
+    a [sio:SIO_000016] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000356 @:restorationMeasurementProcessShape 
+}
+
+:restorationMeasurementProcessShape IRI {
+    a [obo:OBI_0000070] ;
+    a [sio:SIO_000006] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000291 @:treatedTargetShape ;
+    sio:SIO_000229 @:restorationOutputShape 
+}
+
+:treatedTargetShape IRI {
+    a [obo:UBERON_0002616] ;
+    a [sio:SIO_010046] ;
+    rdfs:label xsd:string? ;
+    obo:BFO_0000050 @:entityShape 
+}
+
+:restorationOutputShape IRI {
+    a [obo:IAO_0000109] ;
+    a [sio:SIO_000015] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:float ;
+    sio:SIO_000221 @:outputUnitShape ;
+    sio:SIO_000628 @:treatedAttributeShape 
+}
+
+:outputUnitShape IRI {
+    a [obo:UO_0000187] ;
+    a [sio:SIO_000074] ;
+    rdfs:label xsd:string? 
+}
+
+:treatedAttributeShape IRI {
+    a [obo:PR_P11531-1] ;
+    a [sio:SIO_000614] ;
+    rdfs:label xsd:string? ; 
+    sio:SIO_010079 @:geneShape 
+}
+
+:geneShape IRI {
+    a [<http://www.orpha.net/ORDO/Orphanet_121117>] ;
+    a [obo:SO_0000704] ;
+    a [sio:SIO_010035] ;
+    rdfs:label xsd:string? 
+}
 ```
