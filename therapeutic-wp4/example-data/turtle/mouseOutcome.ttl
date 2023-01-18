@@ -28,7 +28,7 @@
 :restoration_measurement_process_ a obo:ERO_0000833 ;
     rdfs:label "Process: Measuring restored isoform"^^xsd:string .
 
-:treated_age_ a obo:NCIT_C124440, sio:SIO_001013 ;
+:treated_age_ a obo:NCIT_C124440, sio:SIO_000614 ;
     rdfs:label "Age at treatment"^^xsd:string ;
     sio:SIO_000300 "7"^^xsd:integer ;
     sio:SIO_000221 :treated_age_unit_ .
@@ -36,7 +36,7 @@
 :treated_age_unit_ a obo:UO_0000034, sio:SIO_000074 ;
     rdfs:label "Unit: Week"^^xsd:string .
 
-:genotype_ a obo:GENO_0000536, sio:SIO_000614 ;
+:genotype_ a obo:SO_0001027, sio:SIO_000614 ;
     rdfs:label "Genotype"^^xsd:string ;
     sio:SIO_000300 "mdx52"^^xsd:string .
 

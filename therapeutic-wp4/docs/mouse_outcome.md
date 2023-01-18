@@ -42,7 +42,7 @@ This module describes the __mouse__ data elements for therapeutic outcome. It sp
 :restoration_measurement_process_ a obo:ERO_0000833 ;
     rdfs:label "Process: Measuring restored isoform"^^xsd:string .
 
-:treated_age_ a obo:NCIT_C124440, sio:SIO_001013 ;
+:treated_age_ a obo:NCIT_C124440, sio:SIO_000614 ;
     rdfs:label "Age at treatment"^^xsd:string ;
     sio:SIO_000300 "7"^^xsd:integer ;
     sio:SIO_000221 :treated_age_unit_ .
@@ -50,7 +50,7 @@ This module describes the __mouse__ data elements for therapeutic outcome. It sp
 :treated_age_unit_ a obo:UO_0000034, sio:SIO_000074 ;
     rdfs:label "Unit: Week"^^xsd:string .
 
-:genotype_ a obo:GENO_0000536, sio:SIO_000614 ;
+:genotype_ a obo:SO_0001027, sio:SIO_000614 ;
     rdfs:label "Genotype"^^xsd:string ;
     sio:SIO_000300 "mdx52"^^xsd:string .
 
@@ -104,7 +104,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :treatedAgeShape IRI {
     a [obo:NCIT_C124440] ;
-    a [sio:SIO_001013] ;
+    a [sio:SIO_000614] ;
     rdfs:label xsd:string? ;
     sio:SIO_000300 xsd:integer ;
     sio:SIO_000221 @:treatedAgeUnitShape
@@ -117,7 +117,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 }
 
 :genotypeShape IRI {
-    a [obo:GENO_0000536] ;
+    a [obo:SO_0001027] ;
     a [sio:SIO_000614] ;
     rdfs:label xsd:string? ;
     sio:SIO_000300 xsd:string
