@@ -77,5 +77,63 @@ This module describes the __mouse__ data elements for therapeutic outcome. It sp
 ***
 ##### ShEx
 ``` ShEx
+PREFIX : <http://w3id.org/bind/data/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+:identifierShape IRI {
+    a [obo:IAO_0020000] ;
+    a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string ;
+    sio:SIO_000020 @:treatedRoleShape
+}
+
+:entityShape IRI {
+    a [obo:NCBITaxon_10090] ;
+    a [sio:SIO_010375] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000228 @:treatedRoleShape ;
+    sio:SIO_000008 @:treatedAgeShape ;
+    sio:SIO_000008 @:genotypeShape ;
+    sio:SIO_000008 @:behavioralAttributeShape ;
+    sio:SIO_000008 @:treatedAttributeShape
+}
+
+:treatedAgeShape IRI {
+    a [obo:NCIT_C124440] ;
+    a [sio:SIO_001013] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:integer ;
+    sio:SIO_000221 @:treatedAgeUnitShape
+}
+
+:treatedAgeUnitShape IRI {
+    a [obo:UO_0000034] ;
+    a [sio:SIO_000074] ;
+    rdfs:label xsd:string?
+}
+
+:genotypeShape IRI {
+    a [obo:GENO_0000536] ;
+    a [sio:SIO_000614] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string
+}
+
+:treatedRoleShape IRI {
+    a [obo:OBI_0000813] ;
+    a [sio:SIO_000016] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000356 @:restorationMeasurementProcessShape
+}
+
+:treatedTargetShape IRI {
+    a [obo:UBERON_0002616] ;
+    a [sio:SIO_010046] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000068 @:entityShape
+}
 ```
