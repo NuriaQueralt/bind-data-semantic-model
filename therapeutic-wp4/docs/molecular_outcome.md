@@ -113,8 +113,31 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [obo:NCBITaxon_10090] ;
     a [sio:SIO_010375] ;
     rdfs:label xsd:string? ;
+    sio:SIO_000008 @:genotypeShape ;
+    sio:SIO_000008 @:treatedAgeShape ;
     sio:SIO_000228 @:treatedRoleShape ;
     sio:SIO_000008 @:treatedAttributeShape
+}
+
+:genotypeShape IRI {
+    a [obo:SO_0001027] ;
+    a [sio:SIO_000614] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string
+}
+
+:treatedAgeShape IRI {
+    a [obo:NCIT_C124440] ;
+    a [sio:SIO_000614] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:integer ;
+    sio:SIO_000221 @:treatedAgeUnitShape
+}
+
+:treatedAgeUnitShape IRI {
+    a [obo:UO_0000034] ;
+    a [sio:SIO_000074] ;
+    rdfs:label xsd:string?
 }
 
 :treatedRoleShape IRI {
@@ -125,6 +148,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 }
 
 :restorationMeasurementProcessShape IRI {
+    a [obo:ERO_0000833] ;
     a [obo:OBI_0000070] ;
     a [sio:SIO_000006] ;
     rdfs:label xsd:string? ;
@@ -134,6 +158,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 }
 
 :treatedTargetShape IRI {
+    a [obo:UBERON_0002037] ;
     a [obo:UBERON_0002616] ;
     a [sio:SIO_010046] ;
     rdfs:label xsd:string? ;
@@ -150,11 +175,14 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 }
 
 :measurementTimeShape IRI {
+    a [obo:EUPATH_0023051] ;
     a [obo:IAO_0000582] ;
     a [sio:SIO_000417] ;
     rdfs:label xsd:string? ;
+    rdfs:comment xsd:string ;
     sio:SIO_000300 xsd:integer ;
-    sio:SIO_000221 @:timeUnitShape
+    sio:SIO_000221 @:timeUnitShape ;
+    sio:SIO_000001 @:treatedRoleShape
 }
 
 :outputUnitShape IRI {
