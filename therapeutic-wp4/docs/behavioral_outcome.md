@@ -26,39 +26,52 @@ This module describes the __behavioral__ data elements for therapeutic outcome. 
 :entity_ a obo:NCBITaxon_10090, sio:SIO_010375 ;
     rdfs:label "Entity: Mouse"^^xsd:string ;
     sio:SIO_000228 :treated_role_ ;
+    sio:SIO_000008 :treated_attribute_ ;
+    sio:SIO_000008 :genotype_ ;
     sio:SIO_000008 :behavioral_attribute_ .
+
+:genotype_ a obo:SO_0001027, sio:SIO_000614 ;
+    rdfs:label "Genotype"^^xsd:string ;
+    sio:SIO_000300 "Mdx52"^^xsd:string .
 
 :treated_role_ a obo:OBI_0000813, sio:SIO_000016 ;
     rdfs:label "Role: Treated"^^xsd:string ;
     sio:SIO_000356 :behavioral_measurement_process_ .
 
-:behavioral_measurement_process_ a obo:OBI_0000070, sio:SIO_000006 ;
+:behavioral_measurement_process_ a obo:ERO_0001116, obo:OBI_0000070, sio:SIO_000006 ;
     rdfs:label "Process: Measuring behavioral phenotype"^^xsd:string ;
     sio:SIO_000291 :treated_target_ ;
     sio:SIO_000229 :behavioral_output_ ;
     sio:SIO_000008 :measurement_time_ .
 
-:treated_target_ a obo:UBERON_0002616, sio:SIO_010046 ;
+:treated_target_ a obo:UBERON_0001898, obo:UBERON_0002616, sio:SIO_010046 ;
     rdfs:label "Target: Anatomy"^^xsd:string ;
     sio:SIO_000068 :entity_ .
 
 :behavioral_output_ a obo:CMO_0001043, obo:IAO_0000109, sio:SIO_000015 ;
     rdfs:label "Output: Behavioral parameter"^^xsd:string ;
+    rdfs:comment "Time spent freezing"^^xsd:string ;
     sio:SIO_000300 "130.8"^^xsd:float ;
     sio:SIO_000221 :output_unit_ ;
     sio:SIO_000362 :statistical_confidence_ ; # satisfies p-value (I think this should be in EBRAINS metadata) Necessary at level of data?
     sio:SIO_000628 :behavioral_attribute_ .
 
-:measurement_time_ a obo:IAO_0000582, sio:SIO_000417 ;
-    rdfs:label "Time"^^xsd:string ;
+:measurement_time_ a obo:NCIT_C185624, obo:IAO_0000582, sio:SIO_000417 ;
+    rdfs:label "Timestamp: age at function test"^^xsd:string ;
+    rdfs:comment "Age at test"^^xsd:string ;
     sio:SIO_000300 "132"^^xsd:integer ;
-    sio:SIO_000221 :time_unit_ .
+    sio:SIO_000221 :time_unit_ ;
+    sio:SIO_000001 :treated_role_ .
 
 :output_unit_ a obo:UO_0000010, sio:SIO_000074 ;
     rdfs:label "Unit: second"^^xsd:string .
 
+:treated_attribute_ a obo:PR_P11531-1, sio:SIO_000614 ;
+    rdfs:label "Attribute: Dystrophin isoform"^^xsd:string .
+
 :behavioral_attribute_ a obo:NBO_0000573 ,obo:NCIT_C21007 , sio:SIO_000614 ;
-    rdfs:label "Attribute: Behavioral phenotype functional test"^^xsd:string .
+    rdfs:label "Attribute: Behavioral phenotype functional test"^^xsd:string ;
+    rdfs:comment "D1"^^xsd:string .
 
 :time_unit_ a obo:UO_0000033, sio:SIO_000074 ;
     rdfs:label "Unit: Day"^^xsd:string .

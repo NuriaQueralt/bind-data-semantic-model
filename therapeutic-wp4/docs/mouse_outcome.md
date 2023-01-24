@@ -52,9 +52,9 @@ This module describes the __mouse__ data elements for therapeutic outcome. It sp
 
 :genotype_ a obo:SO_0001027, sio:SIO_000614 ;
     rdfs:label "Genotype"^^xsd:string ;
-    sio:SIO_000300 "mdx52"^^xsd:string .
+    sio:SIO_000300 "Mdx52"^^xsd:string .
 
-:treated_target_ a obo:UBERON_0002616, sio:SIO_010046 ;
+:treated_target_ a obo:UBERON_0002037, obo:UBERON_0002616, sio:SIO_010046 ;
     rdfs:label "Target: Anatomy"^^xsd:string ;
     sio:SIO_000068 :entity_ .
 
