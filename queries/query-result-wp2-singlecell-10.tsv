@@ -1,0 +1,2 @@
+?gene_uri	?anatomy_uri	?cell_type	?expression
+<https://rdf.biosemantics.org/resources/bind/gene/Dmd>	<https://rdf.biosemantics.org/resources/bind/wp2/anatomy/cortex>	<http://purl.obolibrary.org/obo/CL_0000548>	"1.09861228866811"^^<http://www.w3.org/2001/XMLSchema#float>
